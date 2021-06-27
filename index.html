@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <title>CodePen - Pagination table with search option</title>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <!-- partial:index.partial.html -->
+        <div class="container">
+            <div class="header_wrap">
+                <div class="num_rows">
+                    <div class="form-group">
+                        <select class="form-control" id="orderRows">
+                            <option value="">排序方式</option>
+                            <option value="1">正序</option>
+                            <option value="2">倒序</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="tb_search">
+                    <input type="text" id="search_input_all" placeholder="Search.." class="form-control">
+                </div>
+            </div>
+            <table class="table table-striped table-class" id= "table-id">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>國旗</th>
+                        <th>國家名稱</th>
+                        <th>2位國家代碼</th>
+                        <th>3位國家代碼</th>
+                        <th>母語名稱</th>
+                        <th>替代國家名稱</th>
+                        <th>國際電話區號</th>
+                    </tr>
+                </thead>
+                <tbody id="show_list">
+                </tbody>
+            </table>
+            <!--Start Pagination -->
+            <div class='pagination-container'>
+                <nav>
+                    <ul class="pagination">
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">更多資訊</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+        <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+        <script src="script.js"></script>
+    </body>
+</html>
